@@ -1,0 +1,19 @@
+name: 'Sensitive Data Leak Detector'
+description: 'Detects accidental commits of sensitive data (API keys, passwords, etc.) using AI-powered pattern recognition.'
+author: 'walshd1'
+branding:
+  icon: 'zap'
+  color: 'blue'
+inputs:
+  gemini_api_key:
+    description: 'Gemini API key (free)'
+    required: false
+  service_token:
+    description: 'Service token (paid)'
+    required: false
+outputs:
+  result:
+    description: 'Result'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
